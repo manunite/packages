@@ -135,6 +135,10 @@ class WebViewController {
     return platform.loadFile(absoluteFilePath);
   }
 
+  Future<void> loadFile2(String absoluteFilePath, String allowReadAccessToPath) {
+    return platform.loadFile2(absoluteFilePath, allowReadAccessToPath);
+  }
+
   /// Loads the Flutter asset specified in the pubspec.yaml file.
   ///
   /// Throws a `PlatformException` if [key] is not part of the specified assets

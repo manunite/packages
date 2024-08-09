@@ -348,6 +348,13 @@ class WebKitWebViewController extends PlatformWebViewController {
     );
   }
 
+  Future<void> loadFile2(String absoluteFilePath, String allowReadAccessToPath) {
+    return _webView.loadFileUrl(
+      absoluteFilePath,
+      readAccessUrl: path.dirname(allowReadAccessToPath),
+    );
+  }
+
   @override
   Future<void> loadFlutterAsset(String key) {
     assert(key.isNotEmpty);

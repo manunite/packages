@@ -61,6 +61,14 @@ abstract class PlatformWebViewController extends PlatformInterface {
         'loadFile is not implemented on the current platform');
   }
 
+  Future<void> loadFile2(
+      String absoluteFilePath,
+      String allowReadAccessToPath
+      ) {
+    throw UnimplementedError(
+        'loadFile is not implemented on the current platform');
+  }
+
   /// Loads the Flutter asset specified in the pubspec.yaml file.
   ///
   /// Throws an ArgumentError if [key] is not part of the specified assets
